@@ -1,0 +1,33 @@
+require 'csv'
+
+support_engineer = ARGV.first
+product = ARGV.first
+description = ARGV.first
+
+
+CSV.foreach('support_engineer.csv') do |row|
+
+if row [0]
+puts ('Product Name:' "#{row[0]}")
+end
+
+if description == nil
+puts ('Description:'" This is a placehoplder description")
+
+else
+puts ('Description:' "#{row[1]}")
+end
+
+if row [2]
+print "Price:"
+puts (100 * row[2].to_r).to_i
+
+
+ puts "Slug URL:" "#{row[0]}".downcase.tr!(" ", "_")
+
+
+print_all = ("row[0]row[1]row[2]row[3]")
+puts ""#{print_all}""
+
+end
+end
