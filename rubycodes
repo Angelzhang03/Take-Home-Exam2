@@ -1,0 +1,44 @@
+require 'csv'
+
+support_engineer = ARGV.first
+
+CSV.foreach('support_engineer.csv', {:headers => true}, ) do |row|
+product, description, price, slug = ARGV.first
+
+
+def product
+puts row[0]
+end
+print ( 'Product Name:' "#{row[0]}")
+
+
+def description
+puts row[1]
+end
+
+if row [1]== nil
+print ( "," ' Description:' "This is a placehoplder description")
+
+else
+print ( "," ' Description:' "#{row[1]}")
+end
+
+
+def price
+row[2]
+end
+
+if row [2]
+print ( "," ' Price:')
+print (100 * row[2].to_r).to_i
+end
+
+
+def slug
+puts row [3]
+end
+
+print ","  " Slug URL:"
+ puts ("#{row[0]}".downcase.tr!(" ", "_"))
+
+end
